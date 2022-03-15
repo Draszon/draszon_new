@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+}
+
+/* STYLE VAR */
+
+:root {
+    --main-font-color: rgb(88, 88, 88);
+    --title-font-color: rgb(21, 35, 53);
+    --line-background: rgb(209, 209, 209);
+    --section-footer-bg-color: rgb(238, 238, 238);
+    --main-font-family: 'Quicksand', sans-serif;
+    --title-font-family: 'Oswald', sans-serif;
+}
+
+/* -------------------------------- */
+
+/* BASIC STYLE */
+
+body {
+    color: var(--main-font-color);
+    font-family: var(--main-font-family);
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-font-color);
+}
+
+/* -------------------------------- */
+
+
+/* HEADER + NAVIGATION */
+
+.nav-bar {
+    border-bottom: 1px solid var(--line-background);
+    width: 100%;
+    height: 3.125rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+.logo h1 {
+    text-transform: uppercase;
+    font-family: var(--title-font-family);
+    color: var(--title-font-color);
+    letter-spacing: 0.1875rem;
+    background: -webkit-linear-gradient(315deg, #0076c5, #30c078 45%);
+    letter-spacing: 5px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* -------------------------------- */
