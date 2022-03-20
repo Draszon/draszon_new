@@ -1,51 +1,112 @@
 :root {
     --main-font-color: rgb(88, 88, 88);
     --title-font-color: rgb(11, 44, 87);
-    --line-background: rgb(209, 209, 209);
+    --line-background: rgb(218, 218, 218);
     --section-footer-bg-color: rgb(238, 238, 238);
     --main-font-family: 'Quicksand', sans-serif;
     --title-font-family: 'Oswald', sans-serif;
 }
 
-/* MAIN SECTION */
+/* HERO SECTION */
 
 .main-wrapper {
-    padding-top: 50px;
+    padding-top: 3.125rem;
 }
 
 .hero {
     display:        flex;
     flex-direction: column;
-    padding:        60px 30px;
+    padding:        3.125rem 1.875rem;
+    border-bottom: 1px solid var(--line-background);
 }
 
 .title h1 {
     text-transform:             uppercase;
-    font-size:                  50px;
+    font-size:                  3.125rem;
     font-family:                'Oswald', sans-serif;
     background:                 -webkit-linear-gradient(315deg, #0076c5, #30c078 45%);
-    letter-spacing:             5px;
+    letter-spacing:             0.3125rem;
     background-clip:            text;
     -webkit-background-clip:    text;
     -webkit-text-fill-color:    transparent;
-    letter-spacing:             5px;
 }
 
 .title,
 .greetings {
     text-align: center;
-    margin:     30px 0;
+    margin:     1.875rem 0;
 }
 
 .greetings h1 {
-    font-family: var(--title-font-family);
-    color: var(--title-font-color);
-    font-size: 24px;
+    font-family:    var(--title-font-family);
+    color:          var(--title-font-color);
+    font-size:      1.875rem;
 }
 
-.greetings h2 {
-    line-height: 1.5;
-    margin-top: 20px;
+.greetings p {
+    line-height:    1.5;
+    margin-top:     1.25rem;
+}
+
+/* -------------------------------- */
+
+
+/* SOCIAL MEDIA SECTION */
+
+.socialmedia-wrapper {
+    border-bottom:  0.0625rem solid var(--line-background);
+    padding:        1.25rem 0;
+    background-color: rgb(245, 245, 245);
+}
+
+.social-media {
+    display:            flex;
+    justify-content:    center;
+}
+
+.fa-brands {
+    font-size:                  1.5625rem;
+    margin:                     0 1.25rem;
+    background:                 -webkit-linear-gradient(315deg, #0076c5, #30c078 35%);
+    background-clip:            text;
+    -webkit-background-clip:    text;
+    -webkit-text-fill-color:    transparent;
+}
+
+.section-title {
+    margin:     2.5rem 0;
+    text-align: center;
+}
+
+/* -------------------------------- */
+
+/* NEWS SECTION */
+
+.news p {
+    line-height:    1.5;
+    margin-top:     0.625rem;
+}
+
+/* -------------------------------- */
+
+
+/* CONTACTS SESSION */
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid var(--line-background);
+}
+
+.row p, a { text-transform: uppercase; }
+
+.row i {
+    color: var(--main-font-color);
+    font-size: 16px;
+    
 }
 
 /* -------------------------------- */
