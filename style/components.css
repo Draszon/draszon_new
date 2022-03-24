@@ -111,3 +111,20 @@
 }
 
 /* -------------------------------- */
+
+
+/* RQUIPMENTS */
+
+.eq-row h3,
+.eq-row p {
+    text-transform: uppercase;
+    font-size: 0.9375rem;
+    margin: 10px 0;
+}
+
+.eq-row {
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--line-background);
+}
+
+/* -------------------------------- */

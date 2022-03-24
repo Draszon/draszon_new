@@ -120,6 +120,6 @@ h2 {
 h3 {
     font-family:    var(--title-font-family);
     color:          var(--title-font-color);
-    font-size:      1.125rem;
+    font-size:      15px;
 }
 
