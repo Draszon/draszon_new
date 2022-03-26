@@ -113,7 +113,7 @@
 /* -------------------------------- */
 
 
-/* RQUIPMENTS */
+/* EQUIPMENTS */
 
 .eq-row h3,
 .eq-row p {
@@ -125,6 +125,54 @@
 .eq-row {
     margin-bottom: 15px;
     border-bottom: 1px solid var(--line-background);
+}
+
+/* -------------------------------- */
+
+
+/* QNA */
+
+.question-answer {
+    margin: 30px 0;
+}
+
+.question,
+.answer {
+    color: black;
+    box-shadow: 0 0 5px 0 rgb(0 0 0 / 10%), 0 0 5px 0 rgb(0 0 0 / 10%);
+    padding: 10px 25px;
+    background: linear-gradient(315deg, rgba(0,118,197,.7) 0%, rgba(48,192,120,.7) 100%);
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.question {
+    border-radius: 0.625rem 0.625rem 0.625rem 0.0625rem;
+}
+
+.answer {
+    border-radius: 0.625rem 0.625rem 0.0625rem 0.625rem;
+}
+
+/* -------------------------------- */
+
+
+/* DOWNLOADS */
+
+.download-title {
+    text-align: center;
+}
+
+.inner-wrapper iframe { margin: 15px 0; }
+
+.download-video {
+    display: flex;
+    flex-direction: column;
+}
+
+.download-btn {
+    margin: 10px 0;
+    border: 1px solid black;
 }
 
 /* -------------------------------- */
