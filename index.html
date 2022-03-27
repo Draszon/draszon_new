@@ -28,17 +28,17 @@
     </header>
     <nav class="navigation" id="navi">
         <i class="fa-solid fa-x close-icon" id="close"></i>
-        <a href="#">Főoldal</a>
-        <a href="#news">Hírek</a>
-        <a href="#contacts">Elérhetőségek</a>
-        <a href="#equipments">Gépezet</a>
-        <a href="#gyik">GY.I.K.</a>
-        <a href="#downloads">Letöltések</a>
-        <a href="#">Programozás</a>
+        <a href="#hero" id="hero-btn">Főoldal</a>
+        <a href="#news" id="news-btn">Hírek</a>
+        <a href="#contacts" id="contacts-btn">Elérhetőségek</a>
+        <a href="#equipments" id="equipments-btn">Gépezet</a>
+        <a href="#gyik" id="gyik-btn">GY.I.K.</a>
+        <a href="#downloads" id="downloads-btn">Letöltések</a>
+        <a href="#programming" id="programming-btn">Programozás</a>
     </nav>
 
     <main class="main-wrapper">
-        <section class="hero">
+        <section class="hero" id="hero">
             <div class="title">
                 <h1>draszon</h1>
             </div>
@@ -53,13 +53,13 @@
 
         <section class="socialmedia-wrapper">
             <div class="social-media">
-                <a href="http://facebook.com/DRASZONGAMEPLAY"><i class="fa-brands fa-facebook-square"></i></a>
-                <a href="http://twitch.tv/DRASZON"><i class="fa-brands fa-twitch"></i></a>
-                <a href="https://www.youtube.com/user/rapao34gameplay"><i class="fa-brands fa-youtube"></i></a>
+                <a href="http://facebook.com/DRASZONGAMEPLAY"><i class="fa-brands fa-facebook-square social-media-logo"></i></a>
+                <a href="http://twitch.tv/DRASZON"><i class="fa-brands fa-twitch social-media-logo"></i></a>
+                <a href="https://www.youtube.com/user/rapao34gameplay"><i class="fa-brands fa-youtube social-media-logo"></i></a>
             </div>
         </section>
 
-        <section class="news-wrapper">
+        <section class="news-wrapper" id="news">
             <div class="news">
                 <h2 class="section-title">Hírek</h2>
                 <h3>Infó a továbbiakról</h3>
@@ -74,7 +74,7 @@
             </div>
         </section>
 
-        <section class="contacts-wrapper">
+        <section class="contacts-wrapper" id="contacts">
             <div class="contacts">
                 <h2 class="section-title">Elérhetőségek</h2>
                 <div class="contacts-list">
@@ -100,7 +100,7 @@
                     </div>
                     <div class="row">
                         <p>battle.net</p>
-                        <a href="http://draszon.com/#"><i class="fab fa-battle-net"></i>DRASZON#2767</i></a>
+                        <a href="#"><i class="fab fa-battle-net"></i>DRASZON#2767</i></a>
                     </div>
                     <div class="row">
                         <p>steam</p>
@@ -110,7 +110,7 @@
             </div>
         </section>
 
-        <section class="equipments">
+        <section class="equipments" id="equipments">
             <div class="equipments-wrapper">
                 <h2 class="section-title">A gépezet</h2>
                 <div class="equipments-first">
@@ -169,13 +169,13 @@
             </div>
         </section>
 
-        <section class="gyik">
+        <section class="gyik" id="gyik">
             <div class="gyik-wrapper">
                 <h2 class="section-title">GY.I.K</h2>
                 <div class="question-answer">
                     <p class="question">Hány éves vagy?</p>
                     <p class="answer">1994. július 3-án születtem, tehát jelenleg 
-                        27 éves vagyok
+                        <span id="birthday"></span> éves vagyok
                     </p>
                 </div>
                 <div class="question-answer">
@@ -247,14 +247,17 @@
             </div>
         </section>
 
-        <section class="downloads">
+        <section class="downloads" id="downloads">
             <div class="download-wrapper">
                 <h2 class="section-title">Letöltések</h2>
                 <div class="inner-wrapper">
                     <h3 class="download-title">Az útvesztő kalandpálya</h3>
                     <div class="download-video">
-                        <iframe width="370" height="220" src="https://www.youtube.com/embed/dzUy03x7uK0"></iframe><br>
-                        <h3 class="download-btn">Letöltések</h3>
+                        <div class="video">
+                            <iframe width="370" height="220" src="https://www.youtube.com/embed/dzUy03x7uK0"></iframe><br>
+                        </div>
+                        
+                        <h3 class="download-btn">Letöltés</h3>
                         <p class="download-description">
                             Első és egyben talán az utolsó Minecraft kalandpályám. 
                             Balázzsal összefogva megépítettük ezt a pályát 
@@ -265,7 +268,34 @@
             </div>
         </section>
 
+        <section class="programming" id="programming">
+            <div class="programming-wrapper">
+                <h2 class="section-title">Programozás</h2>
+                <p>Ez a rész azért jött létre, hogy a webes programozós dolgaim legyen hol
+                    megosztanom. Ha úgy nézzük az egész weboldalt azért hoztam létre, 
+                    hogy gyakorolhassak. Mindenféle sikeres projektem itt megosztom veletek. 
+                    Ki tudjátok próbálni a linkeken.
+                </p>
+                <a href="projects/tictactoe.html">TIC-TAC-TOE</a><br>
+                <a href="projects/blackjack.html">BlackJack</a>
+                <!-- <div class="programming-links">
+                    
+                </div> -->
+            </div>
+        </section>
     </main>
+
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-social-media">
+                <a href="http://facebook.com/DRASZONGAMEPLAY"><i class="fa-brands fa-facebook-square footer-media"></i></a>
+                <a href="http://twitch.tv/DRASZON"><i class="fa-brands fa-twitch footer-media"></i></a>
+                <a href="https://www.youtube.com/user/rapao34gameplay"><i class="fa-brands fa-youtube footer-media"></i></a>
+            </div>
+            <p>DRASZON ©<span id="footer-year"></span></p>
+        </div>
+    </footer>
+
     <script src="assets/javascript/app.js"></script>
 </body>
 </html>

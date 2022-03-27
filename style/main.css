@@ -5,10 +5,10 @@
 /* STYLE VAR */
 
 :root {
-    --main-font-color:          rgb(88, 88, 88);
-    --title-font-color:         rgb(11, 44, 87);
-    --line-background:          rgb(209, 209, 209);
-    --section-footer-bg-color:  rgb(238, 238, 238);
+    --main-font-color:          hsl(0, 0%, 35%);
+    --title-font-color:         hsl(214, 78%, 19%);
+    --line-background:          hsl(0, 0%, 82%);
+    --section-footer-bg-color:  hsl(0, 0%, 93%);
     --main-font-family:         'Quicksand', sans-serif;
     --title-font-family:        'Oswald', sans-serif;
 }
@@ -42,7 +42,7 @@ a {
     left:               0;
     right:              0;
     z-index:            10;
-    background-color:   white;
+    background-color:   hsl(0, 0%, 100%);
 }
 
 .container {
@@ -60,7 +60,7 @@ a {
     font-family:                var(--title-font-family);
     color:                      var(--title-font-color);
     letter-spacing:             0.1875rem;
-    background:                 -webkit-linear-gradient(315deg, #0076c5, #30c078 45%);
+    background:                 -webkit-linear-gradient(315deg, hsl(204, 100%, 39%), hsl(150, 60%, 47%) 45%);
     letter-spacing:             0.3125rem;
     background-clip:            text;
     -webkit-background-clip:    text;
@@ -75,7 +75,7 @@ a {
     align-items:        center;
     top:                50px;
     width:              100%;
-    background-color:   white;
+    background-color:   hsl(0, 0%, 100%);
     z-index:            20;
     border-bottom:      1px solid var(--line-background);
     overflow-x:         hidden;
@@ -99,8 +99,8 @@ a {
 .close-icon {
     visibility: hidden;
     position:   absolute;
-    top:        18px;
-    right:      20px;
+    top:        1.125rem;
+    right:      1.25rem;
     cursor:     pointer;
 }
 
@@ -109,6 +109,7 @@ a {
 section {
     border-bottom:  1px solid var(--line-background);
     padding:        0 1.875rem 2.5rem 1.875rem;
+    line-height: 1.5;
 }
 
 h2 {
@@ -120,6 +121,26 @@ h2 {
 h3 {
     font-family:    var(--title-font-family);
     color:          var(--title-font-color);
-    font-size:      15px;
+    font-size:      0.9375rem;
 }
 
+/* FOOTER */
+
+.footer {
+    background-color: hsl(0, 0%, 97%);
+}
+
+.footer-media {
+    font-size:  1.125rem;
+    color:      hsl(150, 60%, 47%);
+    margin:     0.625rem 0.625rem;
+}
+
+.footer-wrapper {
+    text-align: center;
+    padding:    1.25rem;
+}
+
+.footer-wrapper p{ font-size: 0.625rem; }
+
+/* -------------------------------- */

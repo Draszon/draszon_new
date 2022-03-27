@@ -1,10 +1,10 @@
 :root {
-    --main-font-color: rgb(88, 88, 88);
-    --title-font-color: rgb(11, 44, 87);
-    --line-background: rgb(218, 218, 218);
-    --section-footer-bg-color: rgb(238, 238, 238);
-    --main-font-family: 'Quicksand', sans-serif;
-    --title-font-family: 'Oswald', sans-serif;
+    --main-font-color:          hsl(0, 0%, 35%);
+    --title-font-color:         hsl(214, 78%, 19%);
+    --line-background:          hsl(0, 0%, 85%);
+    --section-footer-bg-color:  hsl(0, 0%, 93%);
+    --main-font-family:         'Quicksand', sans-serif;
+    --title-font-family:        'Oswald', sans-serif;
 }
 
 /* HERO SECTION */
@@ -24,7 +24,7 @@
     text-transform:             uppercase;
     font-size:                  3.125rem;
     font-family:                'Oswald', sans-serif;
-    background:                 -webkit-linear-gradient(315deg, #0076c5, #30c078 45%);
+    background:                 -webkit-linear-gradient(315deg, hsl(204, 100%, 39%), hsl(150, 60%, 47%) 45%);
     letter-spacing:             0.3125rem;
     background-clip:            text;
     -webkit-background-clip:    text;
@@ -56,7 +56,7 @@
 .socialmedia-wrapper {
     border-bottom:      0.0625rem solid var(--line-background);
     padding:            1.25rem 0;
-    background-color:   rgb(245, 245, 245);
+    background-color:   hsl(0, 0%, 96%);
 }
 
 .social-media {
@@ -64,10 +64,10 @@
     justify-content:    center;
 }
 
-.fa-brands {
+.social-media-logo {
     font-size:                  1.5625rem;
     margin:                     0 1.25rem;
-    background:                 -webkit-linear-gradient(315deg, #0076c5, #30c078 35%);
+    background:                 -webkit-linear-gradient(315deg, hsl(204, 100%, 39%), hsl(150, 60%, 47%) 35%);
     background-clip:            text;
     -webkit-background-clip:    text;
     -webkit-text-fill-color:    transparent;
@@ -85,6 +85,7 @@
 .news p {
     line-height:    1.5;
     margin-top:     0.625rem;
+    text-align: justify;
 }
 
 /* -------------------------------- */
@@ -97,8 +98,8 @@
     flex-direction:     row;
     justify-content:    space-between;
     align-items:        center;
-    padding:            10px 0 10px 0;
-    border-bottom:      1px solid var(--line-background);
+    padding:            0.625rem 0 0.625rem 0;
+    border-bottom:      0.0625rem solid var(--line-background);
 }
 
 .row p,
@@ -106,7 +107,7 @@
 
 .row i {
     color:      var(--main-font-color);
-    font-size:  16px;
+    font-size:  1rem;
     
 }
 
@@ -118,12 +119,12 @@
 .eq-row h3,
 .eq-row p {
     text-transform: uppercase;
-    font-size: 0.9375rem;
-    margin: 10px 0;
+    font-size:      0.9375rem;
+    margin:         0.625rem 0;
 }
 
 .eq-row {
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem;
     border-bottom: 1px solid var(--line-background);
 }
 
@@ -132,18 +133,16 @@
 
 /* QNA */
 
-.question-answer {
-    margin: 30px 0;
-}
+.question-answer { margin: 1.875rem 0; }
 
 .question,
 .answer {
-    color: black;
-    box-shadow: 0 0 5px 0 rgb(0 0 0 / 10%), 0 0 5px 0 rgb(0 0 0 / 10%);
-    padding: 10px 25px;
-    background: linear-gradient(315deg, rgba(0,118,197,.7) 0%, rgba(48,192,120,.7) 100%);
-    margin: 5px 0;
-    line-height: 1.5;
+    color:          hsl(0, 0%, 0%);
+    box-shadow:     0 0 0.3125rem 0 hsla(0, 0%, 0%, 0.1), 0 0 0.3125rem 0 hsla(0, 0%, 0%, 0.1);
+    padding:        0.625rem 1.5625rem;
+    background:     linear-gradient(315deg, hsla(204, 100%, 39%, 0.7) 0%, hsla(150, 60%, 47%, 0.7) 100%);
+    margin:         0.3125rem 0;
+    line-height:    1.5;
 }
 
 .question {
@@ -159,20 +158,55 @@
 
 /* DOWNLOADS */
 
-.download-title {
-    text-align: center;
-}
+.download-title { text-align: center; }
 
-.inner-wrapper iframe { margin: 15px 0; }
+.inner-wrapper iframe { margin: 0.9375rem 0; }
 
 .download-video {
-    display: flex;
-    flex-direction: column;
+    display:            flex;
+    flex-direction:     column;
+    justify-content:    center;
 }
 
+.video { text-align: center; }
+
 .download-btn {
-    margin: 10px 0;
-    border: 1px solid black;
+    margin:             0.625rem 0;
+    border:             1px solid var(--line-background);
+    background-color:   hsl(0, 0%, 97%);
+    width:              5rem;
+    text-align:         center;
+    margin:             0 auto;
+    padding:            0.3125rem 0;
+    border-radius:      0.3125rem;
+}
+
+.download-btn:hover {
+    background-color:   hsl(0, 0%, 89%);
+    cursor:             pointer;
+}
+
+.download-description { margin-top: 1.25rem; }
+
+/* -------------------------------- */
+
+
+/* PROGRAMMING */
+
+.programming-wrapper { text-align: justify; }
+
+.programming-wrapper a {
+    margin: 0.3125rem 0;
+    font-family: var(--title-font-family);
+    cursor: pointer;
+}
+
+.programming-wrapper p { margin-bottom: 1.25rem; }
+
+.programming-links {
+    margin:         1.25rem 0;
+    display:        flex;
+    flex-direction: column;
 }
 
 /* -------------------------------- */
