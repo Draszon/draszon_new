@@ -91,18 +91,22 @@ a {
     font-weight:    bold;
 }
 
+/* .mobile-menu { 
+    position: absolute;
+    top:        18px;
+    right:      30px;
+}
+
 .open-icon {
     color:  var(--main-font-color);
     cursor: pointer;
+    position: absolute;
 }
 
 .close-icon {
-    visibility: hidden;
-    position:   absolute;
-    top:        1.125rem;
-    right:      1.25rem;
+    position: absolute;
     cursor:     pointer;
-}
+} */
 
 /* -------------------------------- */
 
@@ -144,3 +148,10 @@ h3 {
 .footer-wrapper p{ font-size: 0.625rem; }
 
 /* -------------------------------- */
+
+
+@media (min-width: 1024px) {
+
+    
+
+}
