@@ -17,14 +17,14 @@
     display:        flex;
     flex-direction: column;
     padding:        3.125rem 1.875rem;
-    border-bottom: 1px solid var(--line-background);
+    border-bottom:  1px solid var(--line-background);
 }
 
 .title h1 {
     text-transform:             uppercase;
     font-size:                  50px;
     font-family:                'Oswald', sans-serif;
-    background:                 -webkit-linear-gradient(315deg, hsl(204, 100%, 39%), hsl(150, 60%, 47%) 45%);
+    background:                 -webkit-linear-gradient(315deg, hsl(204, 100%, 39%), hsl(150, 60%, 47%) 60%);
     letter-spacing:             0.3125rem;
     background-clip:            text;
     -webkit-background-clip:    text;
@@ -74,7 +74,7 @@
 }
 
 .section-title {
-    margin:     2.5rem 0;
+    padding:     2.5rem 0;
     text-align: center;
 }
 
@@ -85,7 +85,7 @@
 .news p {
     line-height:    1.5;
     margin-top:     0.625rem;
-    text-align: justify;
+    text-align:     justify;
 }
 
 /* -------------------------------- */
@@ -115,6 +115,8 @@
 
 
 /* EQUIPMENTS */
+
+.equipments { background-color: hsl(0, 0%, 96%); }
 
 .eq-row h3,
 .eq-row p {
@@ -196,26 +198,12 @@
 
 .programming-wrapper { text-align: justify; }
 
-/* .programming-wrapper a {
-    margin: 0.3125rem 0;
-    font-family: var(--title-font-family);
-    cursor: pointer;
-}
-
-.programming-wrapper p { margin-bottom: 1.25rem; }
-
-.programming-links {
-    margin:         1.25rem 0;
-    display:        flex;
-    flex-direction: column;
-} */
-
 .js-projects {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 20px 0;
-    text-align: center;
+    display:            flex;
+    flex-direction:     row;
+    justify-content:    space-between;
+    margin:             1.25rem 0;
+    text-align:         center;
 }
 
 /* -------------------------------- */
@@ -223,22 +211,59 @@
 
 @media (min-width: 768px) {
 
-    .title h1 {
-        font-size: 80px;
-    }
+    .title h1 { font-size: 5rem; }
 
 }
 
 @media (min-width: 1024px) {
 
-    .title h1 {
-        font-size: 90px;
-    }
+    .title h1 { font-size: 5.625rem; }
 
     section,
     .greetings p {
-        padding-left: 150px;
-        padding-right: 150px;
+        padding-left:   9.375rem;
+        padding-right:  9.375rem;
     }
     
+}
+
+@media (min-width: 1440px) {
+
+    .greetings h1 { font-size: 2.5rem; }
+
+    .greetings p { 
+        font-size:  1.25rem;
+        padding:    0;
+    }
+
+    .greetings { 
+        width:  60%;
+        margin: 0 auto;
+    }
+
+    section { 
+        padding-left:   0rem;
+        padding-right:  0rem;
+    }
+
+    .inner-wrapper {
+        width:  55%;
+        margin: 0 auto;
+    }
+
+    .contacts { padding: 0 180px; }
+
+    .equipments-wrapper {
+        display:            flex;
+        flex-direction:     row;
+        justify-content:    space-between;
+        padding:            0 5rem;
+    }
+
+    .eq-row { border: 0; }
+
+    .js-projects { 
+        width:  50%;
+        margin: 3.125rem auto;
+    }
 }
