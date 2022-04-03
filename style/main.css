@@ -110,15 +110,27 @@ a {
 }
 
 .desktop-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-right:   10px;
+    height: 100%;
     visibility:     hidden;
 }
 
-.desktop-nav a { margin: 0 10px; }
+.desktop-nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px; 
+    height: 100%;
+    transition: .2s;
+}
 
 .desktop-nav a:hover {
-    color:          black;
-    font-weight:    bold;
+    color:          white;
+    background-color: hsl(150, 60%, 47%);
+    transition: .2s;
 }
 
 /* -------------------------------- */
@@ -173,7 +185,7 @@ h3 {
 
 @media (min-width: 1440px) {
 
-    .nav-bar { 
+    .container { 
         width:  60%;
         margin: 0 auto;
     }
