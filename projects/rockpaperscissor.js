@@ -11,6 +11,8 @@ const playerScissor = document.getElementById('player-scissor');
 
 const resultText = document.getElementById('result');
 
+let playerScoreCounter = 0;
+let pcScoreCounter = 0;
 
 function pcScoreGenerator() {
     const value = Math.floor(Math.random() * (4 - 1) +1);
@@ -35,8 +37,7 @@ function scoreCounter() {
 
 }
 
-let playerScoreCounter = 0;
-let pcScoreCounter = 0;
+
 function winLooseCheck(pcScore, playerScore) {
     
     if(pcScore === 1 && playerScore === 1 || pcScore === 2 && playerScore === 2 || pcScore === 3 && playerScore === 3) {
