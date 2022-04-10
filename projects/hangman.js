@@ -1,7 +1,7 @@
 const abcField = document.querySelector('.abc');
 const categoryField = document.getElementById('category-span');
 const letterField = document.querySelector('.letters');
-
+let characters = []
 
 const abc = [
     "A", "Á", "B", "C", "D", "E", "É", "F", "G",
@@ -69,10 +69,18 @@ function questField() {
     for (let i = 0; i < selectedWord.length; i++) {
         const questsField = document.createElement('span');
         questsField.textContent = '_';
+        questsField.id = i;
         letterField.appendChild(questsField);
-        
     }
 }
+
+function chars(string) {
+    return Array.from(String(string));
+}
+
+letters();
+categoryAndWordSelect();
+questField();
 
 // for ciklussal mindegyik betűre az abc lista alapján tesz egy eseményfigyelőt
 // a kattintott mező eltárolja a clickedBtn változóba, megnézi hogy az adott betű
@@ -83,23 +91,33 @@ function letterCheck() {
         lettersField = document.getElementById(abc[i]);
         lettersField.addEventListener('click', (e) => {
             let clickedBtn = e.target;
-            console.log(selectedWord.includes(clickedBtn.textContent.toLowerCase()));
+            let loverCase = clickedBtn.textContent.toLowerCase();
+            let szerepelE = selectedWord.includes(loverCase);
+            console.log(szerepelE);
+
+            if (szerepelE === true) {
+                console.log('van benne');
+                for (let y = 0; y <= lista.length; y++) {
+                    if (loverCase === lista[y]) {
+                        let index = [];
+                        index.push = lista[y];
+                        // let a = lista[y];
+                        console.log(lista.indexOf(a));
+                    }
+                }
+            } else {
+                console.log('nincs benne');
+            }
             clickedBtn.id = '';
             clickedBtn.textContent = 'X';
+            // console.log(lista.indexOf(y));
         });
     }
 }
 
-letters();
-categoryAndWordSelect();
-questField();
 letterCheck();
-
-function chars(string) {
-    return Array.from(String(string));
-}
+let lista = chars(selectedWord);
 
 console.log(selectedWord);
 console.log('a szó hossza:' + ' ' + selectedWord.length + ' betű');
-
-console.log(chars(selectedWord));
+console.log(lista);
