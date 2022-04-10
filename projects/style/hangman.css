@@ -22,8 +22,9 @@ body {
     font-weight:        700;
 }
 
-.category {
+.category { 
     text-align: center;
+    font-size:  1.25rem;
 }
 
 .letters {
@@ -44,13 +45,25 @@ body {
     font-size:          1.25rem;
 }
 
+@media (min-width: 1440px) {
+    .abc {
+        margin: auto;
+        width: 37.5rem;
+    }
+}
+
+
 .abc span { 
     cursor:             pointer;
     margin:             0.3125rem 0.3125rem;
     background-color:   hsl(0, 0%, 95%);
     border:             0.0625rem solid black;
     border-radius:      0.3125rem;
-    padding:            0.4375rem;
+    width:              2.3rem;
+    height:             2.3rem;
+    display:            flex;
+    justify-content:    center;
+    align-items:        center;
     transition:         .2s;
     box-shadow:         0.125rem 0.125rem 0.3125rem 0.0625rem hsla(0, 0%, 0%, 0.58);
 }
@@ -62,6 +75,6 @@ body {
     transition:         .2s;
 }
 
-.hangman-section { text-align:     center; }
+.hangman-section { text-align: center; }
 
 .hangman-wrapper img { height: 18.75rem; }

@@ -2,7 +2,6 @@ const abcField = document.querySelector('.abc');
 const categoryField = document.getElementById('category-span');
 const letterField = document.querySelector('.letters');
 
-let selectedWord = '';
 
 const abc = [
     "A", "Á", "B", "C", "D", "E", "É", "F", "G",
@@ -24,7 +23,7 @@ const furniture = [
 ];
 
 const car = [
-    "audi", "bmw", "ford", "toyota", "wolvo"
+    "audi", "bmw", "ford", "toyota", "wolvo", "lada", "wolksvagen", "skoda", "trabant" 
 ];
 
 function randomGenerator(rnd) {
@@ -35,6 +34,8 @@ function randomGenerator(rnd) {
 function letters() {
     for (let i = 0; i <= abc.length - 1; i++) {
         const abcSpan = document.createElement('span');
+        abcSpan.id = abc[i];
+        abcSpan.classList.add('.letters-class');
         abcSpan.textContent = abc[i];
         abcField.appendChild(abcSpan);
     }
@@ -54,29 +55,51 @@ function categoryAndWordSelect() {
             selectedWord = fruit[fruitRnd];
             break;
         case 1:
-            let furnitureRnd = randomGenerator(fruit.length - 1);
+            let furnitureRnd = randomGenerator(furniture.length - 1);
             selectedWord = furniture[furnitureRnd];
             break;
         case 2:
-            let carRnd = randomGenerator(fruit.length - 1);
+            let carRnd = randomGenerator(car.length - 1);
             selectedWord = car[carRnd];
             break;
     }
 }
 
 function questField() {
-    let db = 0;
-    while (db < selectedWord.length) {
+    for (let i = 0; i < selectedWord.length; i++) {
         const questsField = document.createElement('span');
         questsField.textContent = '_';
         letterField.appendChild(questsField);
-        db++;
+        
+    }
+}
+
+// for ciklussal mindegyik betűre az abc lista alapján tesz egy eseményfigyelőt
+// a kattintott mező eltárolja a clickedBtn változóba, megnézi hogy az adott betű
+// szerepel-e a szóban, az id-t kitörli és a tartalmát X-re változtatja
+function letterCheck() {
+    let lettersField = '';
+    for (let i = 0; i < abc.length; i++) {
+        lettersField = document.getElementById(abc[i]);
+        lettersField.addEventListener('click', (e) => {
+            let clickedBtn = e.target;
+            console.log(selectedWord.includes(clickedBtn.textContent.toLowerCase()));
+            clickedBtn.id = '';
+            clickedBtn.textContent = 'X';
+        });
     }
 }
 
 letters();
 categoryAndWordSelect();
 questField();
+letterCheck();
+
+function chars(string) {
+    return Array.from(String(string));
+}
 
 console.log(selectedWord);
-console.log('a szó hossza:' + ' ' + selectedWord.length);
+console.log('a szó hossza:' + ' ' + selectedWord.length + ' betű');
+
+console.log(chars(selectedWord));
