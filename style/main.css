@@ -150,7 +150,7 @@ h2 {
 h3 {
     font-family:    var(--title-font-family);
     color:          var(--title-font-color);
-    font-size:      0.9375rem;
+    font-size:      1.25rem;
 }
 
 /* FOOTER */

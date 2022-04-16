@@ -85,6 +85,7 @@ questField();
 // for ciklussal mindegyik betűre az abc lista alapján tesz egy eseményfigyelőt
 // a kattintott mező eltárolja a clickedBtn változóba, megnézi hogy az adott betű
 // szerepel-e a szóban, az id-t kitörli és a tartalmát X-re változtatja
+let index = [];
 function letterCheck() {
     let lettersField = '';
     for (let i = 0; i < abc.length; i++) {
@@ -93,16 +94,15 @@ function letterCheck() {
             let clickedBtn = e.target;
             let loverCase = clickedBtn.textContent.toLowerCase();
             let szerepelE = selectedWord.includes(loverCase);
-            console.log(szerepelE);
 
             if (szerepelE === true) {
                 console.log('van benne');
-                for (let y = 0; y <= lista.length; y++) {
-                    if (loverCase === lista[y]) {
-                        let index = [];
-                        index.push = lista[y];
-                        // let a = lista[y];
-                        console.log(lista.indexOf(a));
+                for (let y = 0; y <= characterList.length; y++) {
+                    console.log(characterList[y]);
+                    if (loverCase === characterList[y]) {
+                        let a = characterList[y];
+                        index.push = characterList.indexOf(a);
+                        console.log('A következő indexeken szerepel a betű: ' + characterList.indexOf(a));
                     }
                 }
             } else {
@@ -110,14 +110,14 @@ function letterCheck() {
             }
             clickedBtn.id = '';
             clickedBtn.textContent = 'X';
-            // console.log(lista.indexOf(y));
         });
     }
 }
 
 letterCheck();
-let lista = chars(selectedWord);
+let characterList = chars(selectedWord);
+console.log(index);
 
 console.log(selectedWord);
 console.log('a szó hossza:' + ' ' + selectedWord.length + ' betű');
-console.log(lista);
+console.log(characterList);
