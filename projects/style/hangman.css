@@ -1,5 +1,5 @@
 :root {
-    --main-bg-color:            hsl(0, 0%, 100%);
+    --main-bg-color:            hsl(0, 0%, 95%);
     --fonts-background-color:   hsl(210, 80%, 47%);
     --font-color:               hsl(209, 82%, 9%);
     --font:                     'Ubuntu', sans-serif;
@@ -78,3 +78,21 @@ body {
 .hangman-section { text-align: center; }
 
 .hangman-wrapper img { height: 18.75rem; }
+
+.new-btn  { text-align: center; }
+
+.new-btn p {
+    width:              6.25rem;
+    margin:             auto;
+    background-color:   hsl(0, 0%, 90%);
+    padding:            0.3125rem 0;
+    border:             1px solid hsl(0, 0%, 50%);
+    border-radius:      0.3125rem;
+    cursor:             pointer;
+    transition:         .2s;
+}
+
+.new-btn p:hover {
+    background-color:   hsl(0, 0%, 80%);
+    transition:         .2s;
+}

@@ -1,7 +1,10 @@
 const abcField = document.querySelector('.abc');
 const categoryField = document.getElementById('category-span');
 const letterField = document.querySelector('.letters');
-let characters = []
+const newGameBtn = document.getElementById('new-game-btn');
+const hangmanImg = document.getElementById('hangman-img');
+
+let imgCounter = 1;
 
 const abc = [
     "A", "Á", "B", "C", "D", "E", "É", "F", "G",
@@ -15,15 +18,20 @@ const category = [
 ];
 
 const fruit = [
-    "alma", "banán", "narancs", "körte", "szilva", "szőlő"
+    "alma", "banán", "narancs", "körte", "szilva", "szőlő", "körte", "eper",
+    "gránátalma", "meggy", "málna", "őszibarack", "birsalma", "áfonya", "szeder",
+    "dinnye", "kiwi", "barack", "mandarin"
 ];
 
 const furniture = [
-    "kanapé", "fotel", "szék", "szekrény", "asztal"
+    "kanapé", "fotel", "szék", "szekrény", "asztal", "ágy", "forgószék", "függőágy",
+    "íróasztal", "polc", "könyvespolc", "gardrób"
 ];
 
 const car = [
-    "audi", "bmw", "ford", "toyota", "wolvo", "lada", "wolksvagen", "skoda", "trabant" 
+    "audi", "bmw", "ford", "toyota", "wolvo", "lada", "volkswagen", "skoda", "trabant",
+    "tesla", "jeep", "ford", "honda", "mazda", "nissan", "mitsubishi", "subaru", "opel",
+    "porsche", "fiat", "ferrari", "bentley", "jaguar", "lotus", "koenigsegg", "uaz"
 ];
 
 function randomGenerator(rnd) {
@@ -74,20 +82,17 @@ function questField() {
     }
 }
 
+// a megadott string karaktereiből listát csinál
 function chars(string) {
     return Array.from(String(string));
 }
 
-letters();
-categoryAndWordSelect();
-questField();
-
 // for ciklussal mindegyik betűre az abc lista alapján tesz egy eseményfigyelőt
 // a kattintott mező eltárolja a clickedBtn változóba, megnézi hogy az adott betű
 // szerepel-e a szóban, az id-t kitörli és a tartalmát X-re változtatja
-let index = [];
 function letterCheck() {
     let lettersField = '';
+    let mindemegvan = false;
     for (let i = 0; i < abc.length; i++) {
         lettersField = document.getElementById(abc[i]);
         lettersField.addEventListener('click', (e) => {
@@ -96,28 +101,33 @@ function letterCheck() {
             let szerepelE = selectedWord.includes(loverCase);
 
             if (szerepelE === true) {
-                console.log('van benne');
                 for (let y = 0; y <= characterList.length; y++) {
-                    console.log(characterList[y]);
                     if (loverCase === characterList[y]) {
-                        let a = characterList[y];
-                        index.push = characterList.indexOf(a);
-                        console.log('A következő indexeken szerepel a betű: ' + characterList.indexOf(a));
+                        document.getElementById(y).textContent = loverCase;
                     }
                 }
             } else {
-                console.log('nincs benne');
+                hangmanImg.src = 'assets/hangman/' + imgCounter + '.png';
+                imgCounter++;
+                if (imgCounter === 9) {
+                    alert('Ez most nem sikerült, a kitalálandó szó: ' + selectedWord + ' volt.');
+                    location.reload();
+                }
             }
             clickedBtn.id = '';
             clickedBtn.textContent = 'X';
+            clickedBtn.style.backgroundColor = 'hsl(150, 40%, 70%)';
         });
     }
 }
 
-letterCheck();
-let characterList = chars(selectedWord);
-console.log(index);
+newGameBtn.addEventListener('click', () => {
+    location.reload();
+});
 
+letters();
+categoryAndWordSelect();
+questField();
+let characterList = chars(selectedWord);
+letterCheck();
 console.log(selectedWord);
-console.log('a szó hossza:' + ' ' + selectedWord.length + ' betű');
-console.log(characterList);
