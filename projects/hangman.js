@@ -92,31 +92,35 @@ function chars(string) {
 // szerepel-e a szóban, az id-t kitörli és a tartalmát X-re változtatja
 function letterCheck() {
     let lettersField = '';
-    let mindemegvan = false;
+    let counter = 0;
     for (let i = 0; i < abc.length; i++) {
         lettersField = document.getElementById(abc[i]);
         lettersField.addEventListener('click', (e) => {
             let clickedBtn = e.target;
             let loverCase = clickedBtn.textContent.toLowerCase();
             let szerepelE = selectedWord.includes(loverCase);
-
             if (szerepelE === true) {
-                for (let y = 0; y <= characterList.length; y++) {
+                for (let y = 0; y <= characterList.length - 1; y++) {
                     if (loverCase === characterList[y]) {
                         document.getElementById(y).textContent = loverCase;
-                    }
+                        counter++;
+                        if (counter === characterList.length) {
+                            alert('Gratulálok, kitaláltad!');
+                            location.reload();
+                        }
+                    }     
                 }
             } else {
                 hangmanImg.src = 'assets/hangman/' + imgCounter + '.png';
                 imgCounter++;
                 if (imgCounter === 9) {
-                    alert('Ez most nem sikerült, a kitalálandó szó: ' + selectedWord + ' volt.');
+                    alert('Ez most nem sikerült, a kitalálandó szó ' + selectedWord + ' volt.');
                     location.reload();
                 }
             }
             clickedBtn.id = '';
             clickedBtn.textContent = 'X';
-            clickedBtn.style.backgroundColor = 'hsl(150, 40%, 70%)';
+            clickedBtn.style.backgroundColor = 'hsl(163, 80%, 60%)';
         });
     }
 }
