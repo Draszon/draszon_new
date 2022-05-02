@@ -90,6 +90,7 @@ function chars(string) {
 // for ciklussal mindegyik betűre az abc lista alapján tesz egy eseményfigyelőt
 // a kattintott mező eltárolja a clickedBtn változóba, megnézi hogy az adott betű
 // szerepel-e a szóban, az id-t kitörli és a tartalmát X-re változtatja
+// majd ellenőrzi, hogy minden betű megvan-e, ha igen akkor gratulál, hanem akkor megy tovább
 function letterCheck() {
     let lettersField = '';
     let counter = 0;
