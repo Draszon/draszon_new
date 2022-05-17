@@ -89,6 +89,8 @@ header {
     margin-bottom: 20px;
 }
 
+.audience-help-wrapper { display: none; }
+
 @media (min-width: 1440px) {
     .question-wrapper {
         width:      50%;

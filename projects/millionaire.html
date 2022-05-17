@@ -22,20 +22,20 @@
 
 <main>
     <section class="question-section">
-        <div class="question-wrapper tagline">
-            Ki szokott harangozni, ha szegény az eklézsia a közmondás szerint?
+        <div class="question-wrapper tagline" id="question">
+            
         </div>
     </section>
 
     <section class="answer-section">
         <div class="answer-wrapper">
             <div class="answer-first-row">
-                <p class="answer">A: maga a pap</p>
-                <p class="answer">C: a papné</p>
+                <p class="answer" id="a"></p>
+                <p class="answer" id="c"></p>
             </div>
             <div class="answer-second-row">
-                <p class="answer">B: a templom egere</p>
-                <p class="answer">D: a szél</p>
+                <p class="answer" id="b"></p>
+                <p class="answer" id="d"></p>
             </div>
         </div>
     </section>
@@ -57,36 +57,38 @@
     <section class="money-and-audience-section">
         <div class="money-audience-wrapper">
             <div class="money-wrapper">
-                <p>8. 500 000 Ft</p>
-                <p>7. 300 000 Ft</p>
-                <p>6. 200 000 Ft</p>
-                <p>5. 100 000 Ft</p>
-                <p>4. 50 000 Ft</p>
-                <p>3. 25 000 Ft</p>
-                <p>2. 10 000 Ft</p>
-                <p>1. 5 000 Ft</p>
+                <p id="eighth">8. 500 000 Ft</p>
+                <p id="seventh">7. 300 000 Ft</p>
+                <p id="sixth">6. 200 000 Ft</p>
+                <p id="fifth">5. 100 000 Ft</p>
+                <p id="fourth">4. 50 000 Ft</p>
+                <p id="third">3. 25 000 Ft</p>
+                <p id="second">2. 10 000 Ft</p>
+                <p id="first">1. 5 000 Ft</p>
             </div>
             <div class="audience-help-wrapper">
                 <div class="progress">
                     <label for="file">A</label>
-                    <progress id="file" value="10" max="100"></progress>
+                    <progress id="file" value="0" max="100"></progress>
                 </div>
                 <div class="progress">
                     <label for="file">B</label>
-                    <progress id="file" value="40" max="100"></progress>
+                    <progress id="file" value="0" max="100"></progress>
                 </div>
                 <div class="progress">
                     <label for="file">C</label>
-                    <progress id="file" value="30" max="100"></progress>
+                    <progress id="file" value="0" max="100"></progress>
                 </div>
                 <div class="progress">
                     <label for="file">D</label>
-                    <progress id="file" value="20" max="100"></progress>
+                    <progress id="file" value="0" max="100"></progress>
                 </div>
             </div>
         </div>
     </section>
 </main>
+
+<script type="module" src="millionaire.js"></script>
 
 </body>
 </html>
