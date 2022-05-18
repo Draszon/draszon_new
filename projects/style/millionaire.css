@@ -53,7 +53,12 @@ header {
     margin:         0 0.625rem 0.625rem 0;
 }
 
-.answer:hover {cursor: pointer;}
+.answer:hover {
+    cursor:             pointer;
+    background-color:   orange;
+    color:              black;
+    border:             2px solid hsl(0, 0%, 30%);
+}
 
 .helps-wrapper {
     display:            flex;
@@ -107,7 +112,7 @@ header {
     .helps-wrapper { width: 20%; }
 
     .money-audience-wrapper {
-        width: 40%;
+        width:  40%;
         margin: 0 auto;
     }
 }
