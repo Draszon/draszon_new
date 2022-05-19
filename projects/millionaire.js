@@ -14,7 +14,7 @@ const sixthPrice = document.getElementById('sixth');
 const seventhPrice = document.getElementById('seventh');
 const eighthPrice = document.getElementById('eighth');
 
-let moneyCounter = 1;
+let money = 1;
 
 const questions = {
     "question0": {
@@ -99,10 +99,12 @@ const questions = {
     }
 };
 
-let rnd = Math.floor(Math.random() * 5);
+let rnd = Math.floor(Math.random() * 10);
+
+
 
 function randomGenerator() {
-    rnd = Math.floor(Math.random() * 5);
+    rnd = Math.floor(Math.random() * 10);
 }
 
 function newQuestion() {
@@ -111,80 +113,111 @@ function newQuestion() {
     answerB.innerHTML = questions['question' + rnd]['B'];
     answerC.innerHTML = questions['question' + rnd]['C'];
     answerD.innerHTML = questions['question' + rnd]['D'];
-
-    if (moneyCounter === 1) {
-        firstPrice.style.backgroundColor = "orange";
-        firstPrice.style.color = "black";
-        firstPrice.style.borderRadius = "10px";
-    }
 }
 
 newQuestion();
 
+function moneyCounter(moneyC) {
+    switch (moneyC) {
+        case 1:
+            firstPrice.style.backgroundColor = "orange";
+            firstPrice.style.color = "black";
+            firstPrice.style.borderRadius = '10px';
+            firstPrice.style.transition = '.2s';
+            break;
+        case 2:
+            secondPrice.style.backgroundColor = "orange";
+            secondPrice.style.color = "black";
+            secondPrice.style.borderRadius = '10px';
+            secondPrice.style.transition = '.2s';
+            break;
+        case 3:
+            thirdPrice.style.backgroundColor = "orange";
+            thirdPrice.style.color = "black";
+            thirdPrice.style.borderRadius = '10px';
+            thirdPrice.style.transition = '.2s';
+            break;
+        case 4:
+            fourthPrice.style.backgroundColor = "orange";
+            fourthPrice.style.color = "black";
+            fourthPrice.style.borderRadius = '10px';
+            fourthPrice.style.transition = '.2s';
+            break;
+        case 5:
+            fifthPrice.style.backgroundColor = "orange";
+            fifthPrice.style.color = "black";
+            fifthPrice.style.borderRadius = '10px';
+            fifthPrice.style.transition = '.2s';
+            break;
+        case 6:
+            sixthPrice.style.backgroundColor = "orange";
+            sixthPrice.style.color = "black";
+            sixthPrice.style.borderRadius = '10px';
+            sixthPrice.style.transition = '.2s';
+            break;
+        case 7:
+            seventhPrice.style.backgroundColor = "orange";
+            seventhPrice.style.color = "black";
+            seventhPrice.style.borderRadius = '10px';
+            seventhPrice.style.transition = '.2s';
+            break;
+        case 8:
+            eighthPrice.style.backgroundColor = "orange";
+            eighthPrice.style.color = "black";
+            eighthPrice.style.borderRadius = '10px';
+            eighthPrice.style.transition = '.2s';
+            alert("Gratulálok, megnyerted a főnyereményt!");
+            location.reload();
+            break;
+    }
+}
+
+moneyCounter(money);
+
 answerA.addEventListener("click", () => {
     if (questions['question' + rnd]['answer'] === "A") {
         alert("Gratulálok, eltaláltad, jöhet a következő kérdés!");
-        moneyCounter++;
-        secondPrice.style.backgroundColor = "orange";
-        secondPrice.style.color = "black";
-        secondPrice.style.borderRadius = "10px";
+        moneyCounter(money += 1);
         randomGenerator();
         newQuestion();
     } else {
         alert('Sajnos nem talált, a helyes válasz ' + questions['question' + rnd]['answer'] + ' lett volna');
-        randomGenerator();
-        newQuestion();
-        moneyCounter = 1;
+        location.reload();
     }
 });
 
 answerB.addEventListener("click", () => {
     if (questions['question' + rnd]['answer'] === "B") {
         alert("Gratulálok, eltaláltad, jöhet a következő kérdés!");
-        moneyCounter++;
-        thirdPrice.style.backgroundColor = "orange";
-        thirdPrice.style.color = "black";
-        thirdPrice.style.borderRadius = "10px";
+        moneyCounter(money += 1);
         randomGenerator();
         newQuestion();
     } else {
         alert('Sajnos nem talált, a helyes válasz ' + questions['question' + rnd]['answer'] + ' lett volna');
-        randomGenerator();
-        newQuestion();
-        moneyCounter = 1;
+        location.reload();
     }
 });
 
 answerC.addEventListener("click", () => {
     if (questions['question' + rnd]['answer'] === "C") {
         alert("Gratulálok, eltaláltad, jöhet a következő kérdés!");
-        moneyCounter++;
-        fourthPrice.style.backgroundColor = "orange";
-        fourthPrice.style.color = "black";
-        fourthPrice.style.borderRadius = "10px";
+        moneyCounter(money += 1);
         randomGenerator();
         newQuestion();
     } else {
         alert('Sajnos nem talált, a helyes válasz ' + questions['question' + rnd]['answer'] + ' lett volna');
-        randomGenerator();
-        newQuestion();
-        moneyCounter = 1;
+        location.reload();
     }
 });
 
 answerD.addEventListener("click", () => {
     if (questions['question' + rnd]['answer'] === "D") {
         alert("Gratulálok, eltaláltad, jöhet a következő kérdés!");
-        moneyCounter++;
-        fifthPrice.style.backgroundColor = "orange";
-        fifthPrice.style.color = "black";
-        fifthPrice.style.borderRadius = "10px";
+        moneyCounter(money += 1);
         randomGenerator();
         newQuestion();
     } else {
         alert('Sajnos nem talált, a helyes válasz ' + questions['question' + rnd]['answer'] + ' lett volna');
-        randomGenerator();
-        newQuestion();
-        moneyCounter = 1;
+        location.reload();
     }
 });
