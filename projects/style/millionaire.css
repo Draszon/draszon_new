@@ -92,9 +92,7 @@ header {
     padding:        0.1875rem;
 }
 
-.progress {
-    margin-bottom: 20px;
-}
+.progress { margin-bottom: 1.25rem; }
 
 .audience-help-wrapper { display: none; }
 

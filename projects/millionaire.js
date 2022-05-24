@@ -1,9 +1,9 @@
 const questionField = document.querySelector('#question');
 
-const answerA = document.getElementById('a');
-const answerB = document.getElementById('b');
-const answerC = document.getElementById('c');
-const answerD = document.getElementById('d');
+const answerA = document.getElementById('A');
+const answerB = document.getElementById('B');
+const answerC = document.getElementById('C');
+const answerD = document.getElementById('D');
 
 const firstPrice = document.getElementById('first');
 const secondPrice = document.getElementById('second');
@@ -13,6 +13,10 @@ const fifthPrice = document.getElementById('fifth');
 const sixthPrice = document.getElementById('sixth');
 const seventhPrice = document.getElementById('seventh');
 const eighthPrice = document.getElementById('eighth');
+
+const halfBtn = document.getElementById('help-half');
+const phoneBtn = document.getElementById('help-phone');
+const audienceBtn = document.getElementById('help-audience');
 
 let money = 1;
 
@@ -102,10 +106,13 @@ const questions = {
 let rnd = Math.floor(Math.random() * 10);
 
 
-
-function randomGenerator() {
+let randomGenerator = () => {
     rnd = Math.floor(Math.random() * 10);
-}
+};
+
+/*function randomGenerator() {
+    rnd = Math.floor(Math.random() * 10);
+}*/
 
 function newQuestion() {
     questionField.innerHTML = questions['question' + rnd]['question'];
@@ -113,6 +120,10 @@ function newQuestion() {
     answerB.innerHTML = questions['question' + rnd]['B'];
     answerC.innerHTML = questions['question' + rnd]['C'];
     answerD.innerHTML = questions['question' + rnd]['D'];
+    answerA.style.color = "white";
+    answerB.style.color = "white";
+    answerC.style.color = "white";
+    answerD.style.color = "white";
 }
 
 newQuestion();
@@ -221,3 +232,76 @@ answerD.addEventListener("click", () => {
         location.reload();
     }
 });
+
+halfBtn.addEventListener("click", halfAnswer);
+function halfAnswer() {
+    let counter = 0;
+    let rndLetter1
+    let rndLetter2;
+    let randomLetter;
+    while (counter != 2) {
+        rndLetter1 = Math.floor(Math.random() * 4);
+
+        switch (rndLetter1) {
+            case 0:
+                randomLetter = "A";
+                break;
+            case 1:
+                randomLetter = "B";
+                break;
+            case 2:
+                randomLetter = "C";
+                break;
+            case 3:
+                randomLetter = "D";
+                break;
+        }
+
+        while (rndLetter1 === rndLetter2 || randomLetter === questions['question' + rnd]['answer']) {
+            rndLetter1 = Math.floor(Math.random() * 4);
+            switch (rndLetter1) {
+                case 0:
+                    randomLetter = "A";
+                    break;
+                case 1:
+                    randomLetter = "B";
+                    break;
+                case 2:
+                    randomLetter = "C";
+                    break;
+                case 3:
+                    randomLetter = "D";
+                    break;
+            }
+        }
+        rndLetter2 = rndLetter1;
+        counter++;
+
+        document.getElementById(randomLetter).style.color = "red";
+        halfBtn.style.color = "red";
+        halfBtn.style.borderColor = "red";
+        halfBtn.removeEventListener("click", halfAnswer);
+    }
+}
+
+
+phoneBtn.addEventListener("click", phoneButton);
+function phoneButton() {
+    
+
+
+    phoneBtn.style.borderColor = "red";
+    phoneBtn.style.color = "red";
+    phoneBtn.removeEventListener("click", phoneButton);
+}
+
+audienceBtn.addEventListener("click", audienceButton);
+function audienceButton() {
+
+
+    
+
+    audienceBtn.style.borderColor = "red";
+    audienceBtn.style.color = "red";
+    audienceBtn.removeEventListener("click", audienceButton);
+}
