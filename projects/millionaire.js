@@ -18,6 +18,13 @@ const halfBtn = document.getElementById('help-half');
 const phoneBtn = document.getElementById('help-phone');
 const audienceBtn = document.getElementById('help-audience');
 
+const audienceProgressBar = document.getElementById("audience-wrapper");
+
+const audienceA = document.getElementById("valueA");
+const audienceB = document.getElementById("valueB");
+const audienceC = document.getElementById("valueC");
+const audienceD = document.getElementById("valueD");
+
 let money = 1;
 
 const questions = {
@@ -124,6 +131,10 @@ function newQuestion() {
     answerB.style.color = "white";
     answerC.style.color = "white";
     answerD.style.color = "white";
+    answerA.style.background = "";
+    answerB.style.background = "";
+    answerC.style.background = "";
+    answerD.style.background = "";
 }
 
 newQuestion();
@@ -256,7 +267,6 @@ function halfAnswer() {
                 randomLetter = "D";
                 break;
         }
-
         while (rndLetter1 === rndLetter2 || randomLetter === questions['question' + rnd]['answer']) {
             rndLetter1 = Math.floor(Math.random() * 4);
             switch (rndLetter1) {
@@ -284,12 +294,23 @@ function halfAnswer() {
     }
 }
 
-
 phoneBtn.addEventListener("click", phoneButton);
 function phoneButton() {
-    
-
-
+    const randomAnswer = Math.floor(Math.random() * 4);
+    switch (randomAnswer) {
+        case 0:
+            answerA.style.background = "green";
+            break;
+        case 1:
+            answerB.style.background = "green";
+            break;
+        case 2:
+            answerC.style.background = "green";
+            break;
+        case 3:
+            answerD.style.background = "green";
+            break;
+    }
     phoneBtn.style.borderColor = "red";
     phoneBtn.style.color = "red";
     phoneBtn.removeEventListener("click", phoneButton);
@@ -297,10 +318,34 @@ function phoneButton() {
 
 audienceBtn.addEventListener("click", audienceButton);
 function audienceButton() {
+    const correctAnswer = questions['question' + rnd]['answer'];
+    const correctRandom = Math.floor(Math.random() * (70 - 40) + 40);
+    let presentvalue = 100;
 
-
+    audienceProgressBar.style.display = "block";
+    setTimeout( () => {
+        document.getElementById("value" + correctAnswer).value = correctRandom;
+        if (audienceA.value == "") {
+            presentvalue = presentvalue - correctRandom;
+            audienceA.value = Math.floor(Math.random() * (presentvalue - 0) + 0);
+        }
+        if (audienceB.value == "") {
+            presentvalue = presentvalue - audienceA.value;
+            audienceB.value = Math.floor(Math.random() * (presentvalue - 0) + 0);
+        }
+        if (audienceC.value == "") {
+            presentvalue = presentvalue - audienceB.value;
+            audienceC.value = Math.floor(Math.random() * (presentvalue - 0) + 0);
+            if (audienceD.value != "") {
+                audienceC.value += presentvalue;
+            }
+        }
+        if (audienceD.value == "") {
+            presentvalue = presentvalue - audienceC.value;
+            audienceD.value = presentvalue;
+        }
+    }, 2000);
     
-
     audienceBtn.style.borderColor = "red";
     audienceBtn.style.color = "red";
     audienceBtn.removeEventListener("click", audienceButton);

@@ -94,7 +94,10 @@ header {
 
 .progress { margin-bottom: 1.25rem; }
 
-.audience-help-wrapper { display: none; }
+.audience-help-wrapper { 
+    display: none;
+    transition: .2s;
+}
 
 @media (min-width: 1440px) {
     .question-wrapper {
