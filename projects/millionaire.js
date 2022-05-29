@@ -234,14 +234,11 @@ let rnd = Math.floor(Math.random() * 22);
 
 let randomGenerator = () => {
     rnd = Math.floor(Math.random() * 22);
-    console.log(questions['question' + rnd]['ready']);
-    console.log("bent");
     while(questions['question' + rnd]['ready'] != 'true') {
         rnd = Math.floor(Math.random() * 22);
         console.log("új kérdés");
     }
     questions['question' + rnd]['ready'] = "false";
-    console.log(questions['question' + rnd]['ready']);
     return rnd;
 };
 
