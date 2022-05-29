@@ -34,7 +34,9 @@ const questions = {
         "B": "B: a templom egere",
         "C": "C: a papné",
         "D": "D: a szél",
-        "answer": "A"
+        "answer": "A",
+        "ready": "true"
+
     },
     "question1": {
         "question": "Mi lehet fekete, kanadai, gyalog, fürtös?",
@@ -42,7 +44,8 @@ const questions = {
         "B": "B: bodza",
         "C": "C: vitorla",
         "D": "D: kakukk",
-        "answer": "B"
+        "answer": "B",
+        "ready": "true"
     },
     "question2": {
         "question": "Kiknek nem akart Ady a hegedőse lenni az Új vízeken című verse szerint?",
@@ -50,7 +53,8 @@ const questions = {
         "B": "B: a pénznek",
         "C": "C: a forradalomnak",
         "D": "D: a szürkéknek",
-        "answer": "D"
+        "answer": "D",
+        "ready": "true"
     },
     "question3": {
         "question": "Melyik folyó felett ível át a híres firenzei Ponte Vecchio híd?",
@@ -58,7 +62,8 @@ const questions = {
         "B": "B: Tevere",
         "C": "C: Pó",
         "D": "D: Arno",
-        "answer": "D"
+        "answer": "D",
+        "ready": "true"
     },
     "question4": {
         "question": "Mi a címe Rossini zeneművének, amit nyávogva kell elénekelni?",
@@ -66,7 +71,8 @@ const questions = {
         "B": "B: Szerenád",
         "C": "C: Macskazene",
         "D": "D: Egér-szonáta",
-        "answer": "A"
+        "answer": "A",
+        "ready": "true"
     },
     "question5": {
         "question": "Melyik az a fa, melynek levelei élükkel fordulnak a nap felé?",
@@ -74,7 +80,8 @@ const questions = {
         "B": "B: kaucsukfa",
         "C": "C: eukaliptuszfa",
         "D": "D: tiszafa",
-        "answer": "C"
+        "answer": "C",
+        "ready": "true"
     },
     "question6": {
         "question": "Az alábbiak közül melyik Arany János Toldi triológiájának egyik költeménye?",
@@ -82,7 +89,8 @@ const questions = {
         "B": "B: Toldi és az azkabani fogoly",
         "C": "C: Toldi estéje",
         "D": "D: Toldi két apródja",
-        "answer": "C"
+        "answer": "C",
+        "ready": "true"
     },
     "question7": {
         "question": "A hagyomány szerint hova indultak, akik háztűznézőbe mentek?",
@@ -90,7 +98,8 @@ const questions = {
         "B": "B: vőlegényt látogatni",
         "C": "C: locsolkodni",
         "D": "D: Részvétet nyílvánítani",
-        "answer": "B"
+        "answer": "B",
+        "ready": "true"
     },
     "question8": {
         "question": "A következő hegységek közül melyik nem Eurázsiában található?",
@@ -98,7 +107,8 @@ const questions = {
         "B": "B: Ural",
         "C": "C: Kaukázus",
         "D": "D: Alpok",
-        "answer": "A"
+        "answer": "A",
+        "ready": "true"
     },
     "question9": {
         "question": "A felsorolt tudományágak közül melyik foglalkozik lepkékkel?",
@@ -106,15 +116,133 @@ const questions = {
         "B": "B: ornitológia",
         "C": "C: lepidopőterológia",
         "D": "D: turkológia",
-        "answer": "A"
+        "answer": "A",
+        "ready": "true"
+    },
+    "question10": {
+        "question": "Az alábbi anyagok közül melyik nem a besamelmártás alapanyaga?",
+        "A": "A: list",
+        "B": "B: tojás",
+        "C": "C: vaj",
+        "D": "D: tej",
+        "answer": "B",
+        "ready": "true"
+    },
+    "question11": {
+        "question": "Hogy nevezik az önző, fösvény személyt?",
+        "A": "A: szűkkeblű",
+        "B": "B: bővérű",
+        "C": "C: önfejű",
+        "D": "D: nagymellényű",
+        "answer": "A",
+        "ready": "true"
+    },
+    "question12": {
+        "question": "Milyen, mára elavult jelentése volt évszázadokkal ezelőtt a marha szónak?",
+        "A": "A: vagyon",
+        "B": "B: ügyetlen lovas",
+        "C": "C: család",
+        "D": "D: alattvaló",
+        "answer": "A",
+        "ready": "true"
+    },
+    "question13": {
+        "question": "Milyen pitypangnak hívják a gyermekláncfüvet?",
+        "A": "A: pongyola",
+        "B": "B: pipogya",
+        "C": "C: patyolat",
+        "D": "D: papucs",
+        "answer": "A",
+        "ready": "true"
+    },
+    "question14": {
+        "question": "Mi az élet megrontója Vörösmarty verse szerint?",
+        "A": "A: háború",
+        "B": "B: ábrándozás",
+        "C": "C: fogyókúra",
+        "D": "D: pénz",
+        "answer": "B",
+        "ready": "true"
+    },
+    "question15": {
+        "question": "Kik alapították Karthágó városát?",
+        "A": "A: egyiptomiak",
+        "B": "B: főníciaiak",
+        "C": "C: vikingek",
+        "D": "D: sumérok",
+        "answer": "B",
+        "ready": "true"
+    },
+    "question16": {
+        "question": "Melyik regény első szavai voltak ezek: Május 3., Szász-Besztercén - Május 1-én este 8.35-kor indultam el Münchenből.?",
+        "A": "A: Suszter, szabó, baka, kém",
+        "B": "B: Drakula",
+        "C": "C: A sötétség mélyén",
+        "D": "D: Frankenstein",
+        "answer": "B",
+        "ready": "true"
+    },
+    "question17": {
+        "question": "Melyik alapanyag nem kell a görög salátához?",
+        "A": "A: fetasajt",
+        "B": "B: paradicsom",
+        "C": "C: sárgarépa",
+        "D": "D: uborka",
+        "answer": "C",
+        "ready": "true"
+    },
+    "question18": {
+        "question": "1718-ban melyik volt az a kalóz, aki csatában vesztette életét a mostani Észak-Karolina partjainál?",
+        "A": "A: Calico Jack",
+        "B": "B: Blackbeard vagyis Feketeszakáll",
+        "C": "C: Bartholomew Roberts",
+        "D": "D: Captain Kid eredeti nevén William Kid kapitány",
+        "answer": "C",
+        "ready": "true"
+    },
+    "question19": {
+        "question": "1718-ban melyik volt az a kalóz, aki csatában vesztette életét a mostani Észak-Karolina partjainál?",
+        "A": "A: Calico Jack",
+        "B": "B: Captain Kid eredeti nevén William Kid kapitány",
+        "C": "C: Bartholomew Roberts",
+        "D": "D: Blackbeard vagyis Feketeszakáll",
+        "answer": "D",
+        "ready": "true"
+    },
+    "question20": {
+        "question": "Mikor lett a magyar országgyűlés intézményes székhelye Pozsony?",
+        "A": "A: a mohácsi vész évében",
+        "B": "B: az 1844-es nyelvtörvény után",
+        "C": "C: Márai Terézia megkoronázásakor",
+        "D": "D: a tatárjárást követő évben",
+        "answer": "A",
+        "ready": "true"
+    },
+    "question21": {
+        "question": "Mikor lett a magyar országgyűlés intézményes székhelye Pozsony?",
+        "A": "A: a mohácsi vész évében",
+        "B": "B: az 1844-es nyelvtörvény után",
+        "C": "C: Márai Terézia megkoronázásakor",
+        "D": "D: a tatárjárást követő évben",
+        "answer": "A",
+        "ready": "true"
     }
 };
 
-let rnd = Math.floor(Math.random() * 10);
+let rnd = Math.floor(Math.random() * 22);
 
 
 let randomGenerator = () => {
-    rnd = Math.floor(Math.random() * 10);
+    rnd = Math.floor(Math.random() * 22);
+    console.log(questions['question' + rnd]['ready']);
+    console.log("bent");
+    while(questions['question' + rnd]['ready'] != 'true') {
+        rnd = Math.floor(Math.random() * 22);
+        console.log("új kérdés");
+    }
+    questions['question' + rnd]['ready'] = "false";
+    console.log(questions['question' + rnd]['ready']);
+    return rnd;
 };
 
 /*function randomGenerator() {
