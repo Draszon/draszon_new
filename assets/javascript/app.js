@@ -1,48 +1,63 @@
-function open() {
-    document.getElementById('navi').style.height = '15.375rem';
-    document.getElementById('nav-btn').style.visibility = 'hidden';
-    document.getElementById('close').style.visibility = 'visible';
-}
+const navBtn = document.getElementById('nav-btn');
+const closeBtn = document.getElementById('close');
+const heroBtn = document.getElementById('hero-btn');
+const newsBtn = document.getElementById('news-btn');
+const contactsBtn = document.getElementById('contacts-btn');
+const equipmentsBtn = document.getElementById('equipments-btn');
+const gyikBtn = document.getElementById('gyik-btn');
+const downloadsBtn = document.getElementById('downloads-btn');
+const programmingBtn = document.getElementById('programming-btn');
 
-function close() {
-    document.getElementById('navi').style.height = '0rem';
-    document.getElementById('nav-btn').style.visibility = 'visible';
-    document.getElementById('close').style.visibility = 'hidden';
-}
+const birthday = document.getElementById('birthday');
+const footerYear = document.getElementById('footer-year');
 
-document.getElementById('nav-btn').addEventListener('click', function() {
+const navi = document.getElementById('navi');
+
+const open = () => {
+    navi.style.height = '15.375rem';
+    navBtn.style.visibility = 'hidden';
+    closeBtn.style.visibility = 'visible';
+};
+
+const close = () => {
+    navi.style.height = '0rem';
+    navBtn.style.visibility = 'visible';
+    closeBtn.style.visibility = 'hidden';
+};
+
+navBtn.addEventListener('click', () => {
     open();
 });
 
-document.getElementById('close').addEventListener('click', function() {
+closeBtn.addEventListener('click', () => {
     close();
 });
 
-document.getElementById('hero-btn').addEventListener('click', function() {
+heroBtn.addEventListener('click', () => {
     close();
 })
 
-document.getElementById('news-btn').addEventListener('click', function() {
+newsBtn.addEventListener('click', () => {
     close();
 });
 
-document.getElementById('contacts-btn').addEventListener('click', function() {
+contactsBtn.addEventListener('click', () => {
     close();
 });
 
-document.getElementById('equipments-btn').addEventListener('click', function() {
+equipmentsBtn.addEventListener('click', () => {
     close();
 });
 
-document.getElementById('gyik-btn').addEventListener('click', function() {
+gyikBtn.addEventListener('click', () => {
     close();
 });
 
-document.getElementById('downloads-btn').addEventListener('click', function() {
+downloadsBtn.addEventListener('click', () => {
     close();
 });
 
-document.getElementById('programming-btn').addEventListener('click', function() {
+programmingBtn.addEventListener('click', () => {
     close();
 });
 
@@ -51,7 +66,7 @@ const year = date.getFullYear();
 const month = date.getMonth();
 const day = date.getDay();
 
-function ageCounter(year, month, day) {
+const ageCounter = (year, month, day) => {
     myAge = year - 1994;
     if (month < 7 ) {
         return myAge - 1;
@@ -62,9 +77,9 @@ function ageCounter(year, month, day) {
     } else if (month > 7) {
         return myAge;
     } else {
-        console.log('Valami hiba történt!');
+        console.log('Error');
     }
-}
+};
 
-document.getElementById('birthday').textContent = ageCounter(year, month, day);
-document.getElementById('footer-year').textContent = year;
+birthday.textContent = ageCounter(year, month, day);
+footerYear.textContent = year;
