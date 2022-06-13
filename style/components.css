@@ -29,12 +29,31 @@
     background-clip:            text;
     -webkit-background-clip:    text;
     -webkit-text-fill-color:    transparent;
+    animation-name:             title-animate;
+    animation-duration:         2s;
+    position:                   relative;
+}
+
+@keyframes title-animate {
+    from {opacity: 0; left: -80px;}
+    to {opacity: 1; left: 0px;}
 }
 
 .title,
 .greetings {
     text-align: center;
     margin:     1.875rem 0;
+}
+
+.greetings {
+    position: relative;
+    animation-name: greetings-animate;
+    animation-duration: 2s;
+}
+
+@keyframes greetings-animate {
+    from {opacity: 0; right: -80px;}
+    to {opacity: 1; right: 0px;}
 }
 
 .greetings h1 {

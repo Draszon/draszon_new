@@ -110,27 +110,27 @@ a {
 }
 
 .desktop-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right:   10px;
-    height: 100%;
-    visibility:     hidden;
+    display:            flex;
+    justify-content:    center;
+    align-items:        center;
+    margin-right:       0.625rem;
+    height:             100%;
+    visibility:         hidden;
 }
 
 .desktop-nav a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 10px; 
-    height: 100%;
-    transition: .2s;
+    display:            flex;
+    justify-content:    center;
+    align-items:        center;
+    padding:            0 0.625rem; 
+    height:             100%;
+    transition:         .2s;
 }
 
 .desktop-nav a:hover {
-    color:          white;
-    background-color: hsl(150, 60%, 47%);
-    transition: .2s;
+    color:              white;
+    background-color:   hsl(150, 60%, 47%);
+    transition:         .2s;
 }
 
 /* -------------------------------- */

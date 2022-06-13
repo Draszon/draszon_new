@@ -13,6 +13,8 @@ const footerYear = document.getElementById('footer-year');
 
 const navi = document.getElementById('navi');
 
+const logoAnimate = document.getElementById('animate');
+
 const open = () => {
     navi.style.height = '15.375rem';
     navBtn.style.visibility = 'hidden';
@@ -83,3 +85,4 @@ const ageCounter = (year, month, day) => {
 
 birthday.textContent = ageCounter(year, month, day);
 footerYear.textContent = year;
+
